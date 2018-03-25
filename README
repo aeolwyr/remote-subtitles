@@ -1,0 +1,14 @@
+================
+Remote Subtitles
+================
+
+Display subtitles (or any text) on an Android device. Use an OLED screen for best results. mpv scripts are provided.
+
+You can interface with the application using either
+* TCP: Connect to the port 17827, and send a null-terminated message.
+* UDP: Send the text in a single packet to port 17827.
+
+You can use one of the scripts provided in mpv-scripts folder to display the subtitles on the remote device.
+* If you want to send using the network, modify the script to include the correct IP address.
+* If you want to use ADB to communicate, you need to use TCP. Run the command "adb forward tcp:17827 tcp:17827" to enable socket forwarding.
+
